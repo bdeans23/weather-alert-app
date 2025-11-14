@@ -1,5 +1,4 @@
 :root {
-  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
 
@@ -11,6 +10,11 @@
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
+  box-sizing: border-box ; 
+  padding: 0;
+  margin: 0; 
+  font-family: 'Montserrat', sans-serif
 }
 
 a {
@@ -23,12 +27,24 @@ a:hover {
 }
 
 body {
-  margin: 0;
-  display: flex;
-  place-items: center;
-  min-width: 320px;
   min-height: 100vh;
-}
+  margin: 0 15px;
+  position: relative;
+  @media (min-width: 768px){
+    margin: 0 20px
+  }
+  &:before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-image: url('./assets/backgroundskies.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover}
+} 
 
 h1 {
   font-size: 3.2em;
@@ -66,3 +82,8 @@ button:focus-visible {
     background-color: #f9f9f9;
   }
 }
+
+.weather-alert {
+  height: 100%;
+  margin: 0 auto;
+  position: relative}
