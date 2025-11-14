@@ -149,7 +149,7 @@ class App extends React.Component {
     this.callWeatherInfo(value);
   };
 
-  componentWillMount() {
+  componentDidMount() {
     // See if there's saved cities in localStorage before the App is mounted
     let existingCities = JSON.parse(localStorage.getItem('cityList') || '[]');
 
